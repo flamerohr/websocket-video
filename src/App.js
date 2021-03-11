@@ -1,4 +1,6 @@
 import './App.css';
+import Sidebar from './components/sidebar';
+import Video from './components/video/video';
 
 function App() {
   return (
@@ -7,10 +9,8 @@ function App() {
         React to video in React.
       </header>
       <div className="App-container">
-        <video className="App-video" controls src="/Big_Buck_Bunny_1080_10s_5MB.mp4" />
-        <div className="App-sidebar">
-
-        </div>
+        <Video />
+        <Sidebar />
       </div>
     </div>
   );
