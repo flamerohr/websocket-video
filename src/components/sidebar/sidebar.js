@@ -1,5 +1,6 @@
 import { useCallback } from "react";
 import { useWebMessage } from "../../hooks/use-web-message";
+import { MessageForm } from "../message-form";
 
 import './sidebar.css';
 /**
@@ -17,7 +18,8 @@ export const Sidebar = () => {
 
   return (
     <div className="App-sidebar">
-
+      <MessageForm onSubmit={sendNewMessage} />
+      {/* <MessageList /> */}
     </div>
   );
 };

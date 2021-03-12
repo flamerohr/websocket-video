@@ -1,0 +1,13 @@
+.App-label {
+  display: flex;
+  flex-direction: column;
+  align-content: stretch;
+  text-align: start;
+  margin-bottom: 15px;
+}
+
+.App-label-text {
+  display: block;
+  color: #ccc;
+  font-size: 1.3rem;
+}

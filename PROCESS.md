@@ -20,6 +20,7 @@ For message structure, I decided to keep it similar to a redux action with "type
 
 - Add linting
 - Make the websocket hook connect on demand, and better error handling
+- Change form to use a form library for easier control of data values
 - Add environment variables for some of the values I've hardcoded
 
 # Objectives
