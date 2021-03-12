@@ -11,19 +11,11 @@ export const MessageForm = ({ onSubmit }) => {
     e.preventDefault();
 
     const elements = e.target.elements;
-    let data = {};
-
-    for (let i = 0; i < elements.length; i++) {
-      const element = elements[i];
-
-      if (!element.name) {
-        continue;
-      }
-      data = {
-        ...data,
-        [element.name]: element.value,
-      };
-    }
+    let data = {
+      text: elements.text.value,
+      timestamp: Number(elements.timestamp.value),
+      duration: Number(elements.duration.value),
+    };
 
     onSubmit(data);
   }, [onSubmit]);
