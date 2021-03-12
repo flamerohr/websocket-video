@@ -1,18 +1,21 @@
 import './App.css';
 import Sidebar from './components/sidebar';
 import Video from './components/video/video';
+import { MessageListProvider } from './hooks/use-message-list';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        React to video in React.
-      </header>
-      <div className="App-container">
-        <Video />
-        <Sidebar />
+    <MessageListProvider>
+      <div className="App">
+        <header className="App-header">
+          React to video in React.
+        </header>
+        <div className="App-container">
+          <Video />
+          <Sidebar />
+        </div>
       </div>
-    </div>
+    </MessageListProvider>
   );
 }
 
