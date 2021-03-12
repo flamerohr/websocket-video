@@ -7,19 +7,24 @@ The processes I've followed and my thoughts during the exercise is all noted in 
 The way to get this working and tested is:
 
 Install dependencies:
+
 ```
 npm install
 ```
 
 Run the express server to enable websockets:
+
 ```
 npm run start:server
 ```
 
 Run the react site:
+
 ```
 npm run start
 ```
+
+Visit the react site page, by opening [localhost:3000](http://localhost:3000) in your browser.
 
 
 # Original text
