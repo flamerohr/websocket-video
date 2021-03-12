@@ -16,7 +16,8 @@ wss.on('connection', (ws) => {
     switch (type) {
       case 'new-message': {
         // todo: some validation against the data
-        ws.send(JSON.stringify({ type: 'receive-message', data }));
+        const newMessage = JSON.stringify({ type: 'receive-message', data });
+        wss.clients.forEach(client => client.send(newMessage));
         break;
       }
     }
