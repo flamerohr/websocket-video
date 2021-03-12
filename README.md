@@ -1,3 +1,29 @@
+# Video task
+
+# Outline
+
+The processes I've followed and my thoughts during the exercise is all noted in [PROCESS.md](./PROCESS.md).
+
+The way to get this working and tested is:
+
+Install dependencies:
+```
+npm install
+```
+
+Run the express server to enable websockets:
+```
+npm run start:server
+```
+
+Run the react site:
+```
+npm run start
+```
+
+
+# Original text
+
 Please complete the following tasks:
 
 - Clone (not fork) this repo and run `npm install` then run `npm start` to start.
