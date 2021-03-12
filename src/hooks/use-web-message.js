@@ -41,13 +41,13 @@ export const useWebMessage = ({
   // todo: maybe make this connect on demand, rather than on start
   useEffect(() => {
     log('connecting');
-    const connection = new WebSocket(url)
+    const connection = new WebSocket(url);
     setWs(connection);
 
     return () => {
       connection.close();
     };
-  }, [setWs]);
+  }, [setWs, log, url]);
 
   /*
    * setup event listeners for the websocket instance, separate from creating because the
