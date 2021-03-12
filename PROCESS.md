@@ -8,6 +8,8 @@ Text could be added in real time to video, and backtraced by rewinding the video
 
 It's been a long time since using WebSockets with React, so let some ideas of how to architect this cook overnight.
 
+For message structure, I decided to keep it similar to a redux action with "type" to define the action, and maybe "payload"? I'll think about the payload part a bit more.
+
 ## Some other ideas that come to mind for the future
 
 - Synchronised watching, setup a proper RTC peer connection for a "driver" to control and watch the video which is streamed to everyone at the same time.
