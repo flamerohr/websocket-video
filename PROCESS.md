@@ -1,10 +1,12 @@
-# Ideas that came to mind
+# Thought process during the exercise
 
 An outline of what I expected to build. A webapp to provide an interactive platform for adding text and other media as reactions or markers to the video experience.
 
 Could be for reacting to TikTok videos, or analysing sports videos, or coaching in performance.
 
-Text could be added in real time, and backtraced by rewinding the video.
+Text could be added in real time to video, and backtraced by rewinding the video.
+
+It's been a long time since using WebSockets with React, so let some ideas of how to architect this cook overnight.
 
 ## Some other ideas that come to mind for the future
 
