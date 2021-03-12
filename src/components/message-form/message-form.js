@@ -30,8 +30,9 @@ export const MessageForm = ({ onSubmit }) => {
 
   return (
     <form onSubmit={submitData}>
+      <h1>New Message</h1>
       <label className="App-label">
-        <span className="App-label-text">Message</span>
+        <span className="App-label-text">Text</span>
         <input name="text" />
       </label>
       <label className="App-label">

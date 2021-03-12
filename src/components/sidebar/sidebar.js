@@ -1,10 +1,11 @@
 import { useCallback } from "react";
+import { v4 as uuid } from 'uuid';
 import { useWebMessage } from "../../hooks/use-web-message";
 import { MessageForm } from "../message-form";
-import { v4 as uuid } from 'uuid';
+import { useMessageListActions } from "../../hooks/use-message-list";
+import MessageList from "../message-list";
 
 import './sidebar.css';
-import { useMessageListActions } from "../../hooks/use-message-list";
 /**
  * For handling messages and actions
  */
@@ -39,7 +40,7 @@ export const Sidebar = () => {
   return (
     <div className="App-sidebar">
       <MessageForm onSubmit={sendNewMessage} />
-      {/* <MessageList /> */}
+      <MessageList />
     </div>
   );
 };
