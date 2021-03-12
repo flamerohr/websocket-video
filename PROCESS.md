@@ -14,6 +14,12 @@ It's been a long time since using WebSockets with React, so let some ideas of ho
 
 - Clicking on a text in a history list could take the video to the timestamp where the text starts to appear.
 
+# Things I would do if there's more time
+
+- Add linting
+- Make the websocket hook connect on demand, and better error handling
+- Add environment variables for some of the values I've hardcoded
+
 # Objectives
 
 - Clone (not fork) this repo and run `npm install` then run `npm start` to start.
