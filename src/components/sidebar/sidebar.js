@@ -12,8 +12,13 @@ export const Sidebar = () => {
   const { addMessage } = useMessageListActions();
 
   const onMessage = useCallback((message) => {
-    // todo: filter to only add message when "receive-message" type
-    addMessage(message)
+    const { type, data } = message;
+    switch (type) {
+      case 'receive-message': {
+        addMessage(data);
+        break;
+      }
+    }
   }, [addMessage]);
 
   // todo: I think this will re-render a lot, to investigate
@@ -22,7 +27,7 @@ export const Sidebar = () => {
   const sendNewMessage = useCallback(
     (message) => send({
       type: 'new-message',
-      message: {
+      data: {
         ...message,
         // note: id probably not necessary, but helps me keep sane
         id: uuid(),

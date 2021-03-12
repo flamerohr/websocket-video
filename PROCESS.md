@@ -22,6 +22,8 @@ For message structure, I decided to keep it similar to a redux action with "type
 - Make the websocket hook connect on demand, and better error handling
 - Change form to use a form library for easier control of data values
 - Add environment variables for some of the values I've hardcoded
+- Clean up the code, reduce file sizes
+- Revisit the way state is handled, particularly how actions would cause a re-render when state updates
 
 # Objectives
 
