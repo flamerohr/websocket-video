@@ -18,6 +18,7 @@ export const MessageListProvider = ({ children, initialValue = [] }) => {
         message,
       ])
     ),
+    setMessages,
   }), [messages, setMessages]);
 
   return (

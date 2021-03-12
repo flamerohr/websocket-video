@@ -1,4 +1,4 @@
-import { useCallback } from "react";
+import { useCallback, useRef } from "react";
 import { v4 as uuid } from 'uuid';
 import { useWebMessage } from "../../hooks/use-web-message";
 import { MessageForm } from "../message-form";
@@ -10,21 +10,36 @@ import './sidebar.css';
  * For handling messages and actions
  */
 export const Sidebar = () => {
-  const { addMessage } = useMessageListActions();
+  const { addMessage, setMessages } = useMessageListActions();
+  const sendRef = useRef();
 
   const onMessage = useCallback((message) => {
     const { type, data } = message;
     switch (type) {
+      case 'connected': {
+        if (message.connected) {
+          // needed to use sendRef because of "send" being updated on state update
+          sendRef.current({ type: 'get-history' })
+        }
+        break;
+      }
       case 'receive-message': {
         addMessage(data);
         break;
       }
+      case 'receive-history': {
+        setMessages(data);
+        break;
+      }
+      default:
+        // nothing
     }
-  }, [addMessage]);
+  }, [addMessage, setMessages]);
 
   // todo: I think this will re-render a lot, to investigate
   const { send } = useWebMessage({ onMessage });
 
+  sendRef.current = send;
   const sendNewMessage = useCallback(
     (message) => send({
       type: 'new-message',

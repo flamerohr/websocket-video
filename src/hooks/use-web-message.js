@@ -86,6 +86,7 @@ export const useWebMessage = ({
 
   /**
    * Method for the user to use to send messages to the server
+   * todo: send needs to not refresh or change, utilise useRef
    */
   const send = useCallback((message) => {
     if (!ws) {
